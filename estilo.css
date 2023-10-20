@@ -1,11 +1,16 @@
-/*@font-face { font-family: Futura; src: url('futura.ttf'); }*/
+@font-face { font-family: Futura; src: url('futura.ttf'); }
+
 body{
+	font-family: "Futura";
 	font-size: 2em;
+	background: url(fondoFoto.jpg) no-repeat center center fixed;
+	background-size: cover;
 }
 .contPrincipal{
 	margin: 0 auto;
-	width: 100%;
-	background:#b9ddfd;
+	padding: 30px;
+	background-color: rgba(172, 220, 234, 0.61);
+	backdrop-filter: blur(5px);
 }
 h1{text-align:center;}
 #ph{
