@@ -13,8 +13,14 @@ body{
 	backdrop-filter: blur(4px);
 }
 h1{text-align:center;}
-#ph{
-	color:blue;
+#tituloSalvaFecha{
+	color:rgb(255, 255, 255);
+	margin-bottom: 10px;
+	font-size: 1.5em;
+}
+.opcionCalendario{
+	margin: 0;
+	font-size: 0.7em;
 }
 
 @media screen and (min-aspect-ratio:12/10){
@@ -23,5 +29,12 @@ body{
 }
 .contPrincipal{
 	width: 400px;
+}
+#tituloSalvaFecha{
+	font-size: 1.5em;
+}
+.opcionCalendario{
+	margin: 0;
+	font-size: 1em;
 }
 }
