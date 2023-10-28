@@ -9,7 +9,7 @@ body{
 .contPrincipal{
 	margin: 0 auto;
 	padding: 30px;
-	background-color: rgba(172, 220, 234, 0.1);
+	background-color: rgba(111, 186, 209, 0.2);
 	backdrop-filter: blur(4px);
 }
 h1{text-align:center;}
@@ -28,13 +28,17 @@ body{
 	font-size: 1em;
 }
 .contPrincipal{
-	width: 400px;
+	width: fit-content;
+	max-width: 60%;
+}
+h1{
+	font-size: 2em;
 }
 #tituloSalvaFecha{
-	font-size: 1.5em;
+	font-size: 1.8em;
 }
 .opcionCalendario{
 	margin: 0;
-	font-size: 1em;
+	font-size: 1.3em;
 }
 }
