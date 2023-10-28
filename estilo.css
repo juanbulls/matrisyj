@@ -9,8 +9,8 @@ body{
 .contPrincipal{
 	margin: 0 auto;
 	padding: 30px;
-	background-color: rgba(172, 220, 234, 0.61);
-	backdrop-filter: blur(5px);
+	background-color: rgba(172, 220, 234, 0.1);
+	backdrop-filter: blur(4px);
 }
 h1{text-align:center;}
 #ph{
