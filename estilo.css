@@ -9,6 +9,8 @@ body{
 .contPrincipal{
 	margin: 0 auto;
 	padding: 30px;
+	width: fit-content;
+	max-width: 90%;
 	background-color: rgba(111, 186, 209, 0.2);
 	backdrop-filter: blur(4px);
 }
@@ -28,7 +30,6 @@ body{
 	font-size: 1em;
 }
 .contPrincipal{
-	width: fit-content;
 	max-width: 60%;
 }
 h1{
