@@ -11,20 +11,23 @@
 <div class="contPrincipal">
     <h1>Matrimonio Silvana y Juan</h1>
     <p id="tituloSalvaFecha">Fecha: 16 de marzo de 2024:</p>
-    <p class="opcionCalendario"> Google: 
-        <a
-            target="_blank" 
-            href="https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20240316T200000Z%2F20240317T044500Z&details=Encuentra%20los%20ultimos%20detalles%20en%20https%3A%2F%2Fwww.silvanayjuan.com&location=&text=Matrimonio%20Silvana%20y%20Juan"> 
-            Save the Date
-        </a> 
-    </p>
-    <p class="opcionCalendario"> Outlook: 
-        <a 
-            target="_blank" 
-            href="https://outlook.live.com/calendar/0/deeplink/compose?allday=false&body=Encuentra%20los%20ultimos%20detalles%20en%20https%3A%2F%2Fwww.silvanayjuan.com&enddt=2024-03-16T23%3A45%3A00&location=&path=%2Fcalendar%2Faction%2Fcompose&rru=addevent&startdt=2024-03-16T15%3A00%3A00&subject=Matrimonio%20Silvana%20y%20Juan"> 
-            Save the Date
-        </a> 
-    </p>
+    <div class="botonesDate">
+        <p class="opcionCalendario"> Save the date: </p>
+        <button
+            id="google"
+            class="botonEmail"
+            onclick="abrirPagina('https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20240316T200000Z%2F20240317T044500Z&details=Encuentra%20los%20ultimos%20detalles%20en%20https%3A%2F%2Fwww.silvanayjuan.com&location=&text=Matrimonio%20Silvana%20y%20Juan')"
+            >
+            Google
+        </button> 
+        <button 
+            id="outlook"
+            class="botonEmail"
+            onclick="abrirPagina('https://outlook.live.com/calendar/0/deeplink/compose?allday=false&body=Encuentra%20los%20ultimos%20detalles%20en%20https%3A%2F%2Fwww.silvanayjuan.com&enddt=2024-03-16T23%3A45%3A00&location=&path=%2Fcalendar%2Faction%2Fcompose&rru=addevent&startdt=2024-03-16T15%3A00%3A00&subject=Matrimonio%20Silvana%20y%20Juan')"
+            >
+            Outlook
+        </button> 
+    </div>
     <p id="pj"></p>
 </div>
 <script src="codigo.js"></script>

@@ -20,11 +20,36 @@ h1{text-align:center;}
 	margin-bottom: 10px;
 	font-size: 1.5em;
 }
+.botonesDate{
+	text-align: center
+}
 .opcionCalendario{
 	margin: 0;
 	font-size: 0.7em;
 }
-
+.botonEmail{
+	display: inline-block;
+	outline: 0;
+	appearance: none;
+	padding: 0px 12px;
+	border: 0px solid transparent;
+	border-radius: 4px;
+	text-decoration: none;
+	cursor: pointer;
+	color: rgb(255, 255, 255);
+	font-size: 14px;
+	font-weight: 400;
+	height: 36px;
+}
+.botonEmail:hover{
+	box-shadow: 2px 3px 4px #888888;
+}
+#google{
+	background-color: rgb(255,167,0);
+}
+#outlook{
+	background-color: rgb(0, 114, 198);
+}
 @media screen and (min-aspect-ratio:12/10){
 body{
 	font-size: 1em;
