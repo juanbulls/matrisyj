@@ -1,8 +1,8 @@
-function abrirPagina(url){
-    window.open(url,'_blank');
-}
+<?php
+$clave = $_REQUEST["puntos"] ?? $argv[1] ?? null;
+$permitidas = array("nana", "mona", "prado", "sumo", "prado sumo");
 
-const secDummy = " <p> <b>Indicaciones</b> </p> <p>" +
+$secMapa = " <p> <b>Indicaciones</b> </p> <p>" +
 + "Lorem ipsum dolor sit amet, consectetur adipiscing elit, "
 + "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
 + "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris "
@@ -11,18 +11,10 @@ const secDummy = " <p> <b>Indicaciones</b> </p> <p>" +
 + "pariatur. Excepteur sint occaecat cupidatat non proident, sunt in "
 + "culpa qui officia deserunt mollit anim id est laborum."
 + "</p> <img src='mapaDummy.png'>";
-function mapaEjecutor(event, clave){
-    if (event.keyCode === 13) {
-        event.preventDefault();
-        mostrarMapa(clave)
-    }
+
+if (in_array(strtolower($clave), $permitidas)) {
+    return $secMapa;
+} else {
+    return "mala";
 }
-function mostrarMapa(clave){
-    if (local) {
-        if (clave == "local") {
-            id('secLugar').innerHTML = secDummy;
-        } else { alert("Mala clave.")}
-    } else {
-        alert("Estoy en linea")
-    }
-}
+?>
