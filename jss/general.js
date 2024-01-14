@@ -17,12 +17,12 @@ function mapaEjecutor(event, clave){
         mostrarMapa(clave)
     }
 }
-function mostrarMapa(clave){
+async function mostrarMapa(clave){
     if (local) {
         if (clave == "local") {
             id('secLugar').innerHTML = secDummy;
         } else { alert("Mala clave.")}
     } else {
-        ajax('mapa.js', 'clave='+clave)
+        id('secLugar').innerHTML =  ajax('mapa.js', 'clave='+clave)
     }
 }

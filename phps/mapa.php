@@ -1,6 +1,6 @@
 <?php
 $clave = isset($_REQUEST["clave"]) ? $_REQUEST["clave"] : (isset($argv[1]) ? $argv[1] : null);
-$permitidas = array("nana", "mona", "prado", "sumo", "prado sumo");
+$permitidas = array("nana", "mona", "prado", "sumo", "prado sumo", "toyota prado");
 
 $secMapa = " <p> <b>Indicaciones</b> </p> <p> \
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, \
