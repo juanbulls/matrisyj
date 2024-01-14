@@ -28,7 +28,7 @@ h2{
 	margin: 0;
 	font-size: 1.5em;
 	text-align: right;
-	margin-top: 1em;
+	margin-top: 2em;
 	text-shadow: -1px 5px 16px white;
 	color: rgb(0 0 0);
 }
@@ -43,6 +43,10 @@ input{
 	padding: 0.3em;
 	border: none;
 	background: none;
+	border-bottom: solid #0072c6;
+}
+textarea:focus, input:focus{
+    outline: none;
 	border-bottom: solid #ef7b47;
 }
 img{
@@ -97,6 +101,7 @@ h1{
 h2{
 	font-size: 1.2em;
 	margin-right: 15px;
+	text-align: left;
 }
 button{
 	font-size: 1em;

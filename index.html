@@ -8,6 +8,7 @@
 </head>
 
 <body>
+<script src="inicial.js"></script>
 <div class="contPrincipal">
     <h1>Matrimonio Silvana y Juan</h1>
     <p id="tituloSalvaFecha">16 de marzo de 2024</p>
@@ -32,17 +33,18 @@
     
     <h2>Confirmar Asistencia:</h2>
     <hr/>
-    <input id="clave" size="22" placeholder="Nombre de quienes asisten">
+    <input id="asistentes" size="22" placeholder="Nombre de quienes asisten">
     <button onclick="">Enviar</button>
 
     <h2>Lugar de la misa y recepción</h2>
     <hr/>
-    <label>Ingresa clave:</label>
-    <input id="clave" size="8" placeholder="">
-    <button onclick="">Mostrar</button>
-    <p>Pista clave 1: Cómo le dicen a silvana en la casa?</p>
-    <p>Pista clave 2: Qué carro tiene Juan?</p>
-
+    <div id="secLugar">
+        <label >Ingresa clave:</label>
+        <input onkeypress="mapaEjecutor(event, document.getElementById('clave').value)" type="text" id="clave" size="8">
+        <button onclick="mostrarMapa(document.getElementById('clave').value)">Mostrar</button>
+        <p>Pista clave 1: Cómo le dicen a silvana en la casa?</p>
+        <p>Pista clave 2: Qué carro tiene Juan?</p>
+    </div>
     <h2>Código De Vestimenta</h2>
     <hr/>
     <img src="vestimenta.jpg"/>
@@ -51,6 +53,6 @@
     <hr/>
     <p>Buena actitud de fiesta</p>
 </div>
-<script src="codigo.js"></script>
+<script src="general.js"></script>
 </body>
 </html>
