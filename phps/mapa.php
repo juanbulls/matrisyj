@@ -1,5 +1,5 @@
 <?php
-$clave = $_REQUEST["puntos"] ?? $argv[1] ?? null;
+$clave = isset($_REQUEST["clave"]) ? $_REQUEST["clave"] : (isset($argv[1]) ? $argv[1] : null);
 $permitidas = array("nana", "mona", "prado", "sumo", "prado sumo");
 
 $secMapa = " <p> <b>Indicaciones</b> </p> <p>" +
