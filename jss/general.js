@@ -23,7 +23,15 @@ async function mostrarMapa(clave){
             id('secLugar').innerHTML = secDummy;
         } else { alert("Mala clave.")}
     } else {
-        var respuesta = ajax('mapa.js', 'clave='+clave)
-        id('secLugar').innerHTML =  respuesta;
+        try {
+            const response = await ajax('mapa.php', 'clave=' + clave);
+            if (response.trim() === "mala") {
+                console.error("Clave errara.");
+            } else {
+                id('secLugar').innerHTML = response;
+            }
+        } catch (error) {
+            console.error("Error:", error);
+        }
     }
 }
