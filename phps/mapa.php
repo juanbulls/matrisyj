@@ -13,8 +13,8 @@ $secMapa = " <p> <b>Indicaciones</b> </p> <p>" +
 + "</p> <img src='mapaDummy.png'>";
 
 if (in_array(strtolower($clave), $permitidas)) {
-    return $secMapa;
+    echo $secMapa;
 } else {
-    return "mala";
+    echo "mala";
 }
 ?>
