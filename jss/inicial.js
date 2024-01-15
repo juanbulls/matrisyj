@@ -10,7 +10,7 @@ function ajax(archivo, variables=null){
         req.open("GET", url);
         req.onload = function (){
             if (this.readyState == 4 && this.status == 200) {
-                resolve(response);
+                resolve(this.response);
             }
         };
         req.send();
