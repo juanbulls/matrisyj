@@ -26,7 +26,7 @@ async function mostrarMapa(clave){
         try {
             const response = await ajax('mapa.php', 'clave=' + clave);
             if (response.trim() === "mala") {
-                console.error("Clave errara.");
+                alert("Clave errada.");
             } else {
                 id('secLugar').innerHTML = response;
             }
