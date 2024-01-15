@@ -81,7 +81,9 @@ button{
 #outlook{
 	background-color: rgb(0, 114, 198);
 }
-
+#respuestaAsistentes{
+	color: #007a13;
+}
 
 /* ************Propiedades solo para desktop************ */
 @media screen and (min-aspect-ratio:12/10){

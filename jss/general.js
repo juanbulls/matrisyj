@@ -2,7 +2,7 @@ function abrirPagina(url){
     window.open(url,'_blank');
 }
 
-const secDummy = " <p> <b>Indicaciones</b> </p> <p>" +
+const secDummy = " <p> <b>Indicaciones</b> </p> <p>"
 + "Lorem ipsum dolor sit amet, consectetur adipiscing elit, "
 + "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
 + "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris "
@@ -10,7 +10,7 @@ const secDummy = " <p> <b>Indicaciones</b> </p> <p>" +
 + "reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla "
 + "pariatur. Excepteur sint occaecat cupidatat non proident, sunt in "
 + "culpa qui officia deserunt mollit anim id est laborum."
-+ "</p> <img src='mapaDummy.png'>";
++ "</p> <img src='mpim/mapaDummy.png'>";
 function mapaEjecutor(event, clave){
     if (event.keyCode === 13) {
         event.preventDefault();
@@ -29,6 +29,31 @@ async function mostrarMapa(clave){
                 alert("Clave errada.");
             } else {
                 id('secLugar').innerHTML = response;
+            }
+        } catch (error) {
+            console.error("Error:", error);
+        }
+    }
+}
+
+function asistentesEjecutor(event, asistentes){
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        enviarAsistentes(asistentes);
+    }
+}
+async function enviarAsistentes(asistentes){
+    if (local) {
+        id('respuestaAsistentes').innerHTML = "Asistentes enviados correctamente";
+        id('asistentes').value = '';
+    } else {
+        try {
+            const response = await ajax('asistentes.php', 'asistentes=' + asistentes);
+            if (response.trim() === "error") {
+                alert("Error enviando asistentes");
+            } else { 
+                id('respuestaAsistentes').innerHTML = "Asistentes enviados correctamente";
+                id('asistentes').value = '';
             }
         } catch (error) {
             console.error("Error:", error);

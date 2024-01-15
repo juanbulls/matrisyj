@@ -33,14 +33,15 @@
     
     <h2>Confirmar Asistencia:</h2>
     <hr/>
-    <input id="asistentes" size="22" placeholder="Nombre de quienes asisten">
-    <button onclick="">Enviar</button>
-
+    <input onkeypress="asistentesEjecutor(event, this.value)"
+         id="asistentes" size="22" placeholder="Nombre de quienes asisten">
+    <button onclick="enviarAsistentes(document.getElementById('asistentes').value)">Enviar</button>
+    <p id="respuestaAsistentes"></p>
     <h2>Lugar de la misa y recepción</h2>
     <hr/>
     <div id="secLugar">
         <label >Ingresa clave:</label>
-        <input onkeypress="mapaEjecutor(event, document.getElementById('clave').value)" type="text" id="clave" size="8">
+        <input onkeypress="mapaEjecutor(event, this.value)" type="text" id="clave" size="8">
         <button onclick="mostrarMapa(document.getElementById('clave').value)">Mostrar</button>
         <p>Pista clave 1: Cómo le dicen a silvana en la casa?</p>
         <p>Pista clave 2: Qué carro tiene Juan?</p>
