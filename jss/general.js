@@ -48,7 +48,7 @@ async function enviarAsistentes(asistentes){
         id('asistentes').value = '';
     } else {
         try {
-            const response = await ajax('asistentes.php', 'asistentes=' + asistentes);
+            const response = await ajax('asistentes.php', 'nombre=' + asistentes);
             if (response.trim() === "error") {
                 alert("Error enviando asistentes");
             } else { 
