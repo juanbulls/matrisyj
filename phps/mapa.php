@@ -10,7 +10,7 @@ $secMapa = " <p> <b>Indicaciones</b> </p> <p> \
     reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla \
     pariatur. Excepteur sint occaecat cupidatat non proident, sunt in \
     culpa qui officia deserunt mollit anim id est laborum.\
-    </p> <img src='mapaDummy.png'>";
+    </p> <img src='mpim/mapaDummy.png'>";
 
 if (in_array(strtolower($clave), $permitidas)) {
     echo $secMapa;
