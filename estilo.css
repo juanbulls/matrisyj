@@ -39,11 +39,12 @@ label{
     font-size: 1.3em;
 }
 input{
-	font-size: 1.2em;
+	font-size: 1.1em;
 	padding: 0.3em;
 	border: none;
 	background: none;
 	border-bottom: solid #0072c6;
+	width: 600px;
 }
 textarea:focus, input:focus{
     outline: none;
@@ -112,6 +113,7 @@ button{
 
 input{
 	font-size: 1em;
+	width: 400px;
 }
 .botonEmail{
 	font-size: 14px;
