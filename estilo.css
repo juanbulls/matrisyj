@@ -87,11 +87,21 @@ button{
 	background-color: rgb(0, 114, 198);
 }
 #respuestaAsistentes{
-	
 color: #007a13;
 }
 #clave{
 	width: 300px;
+}
+#imgMapa{
+	max-width: 100%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0.2em;
+}
+#imgMapote{
+	width: 100%;
+	display: block;
 }
 
 /* ************Propiedades solo para desktop************ */

@@ -53,3 +53,11 @@ async function enviarAsistentes(asistentes){
         }
     }
 }
+
+function expander(expandido){
+    if (expandido) {
+        
+    } else {
+
+    }
+}
