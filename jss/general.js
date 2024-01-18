@@ -56,8 +56,10 @@ async function enviarAsistentes(asistentes){
 
 function expander(expandido){
     if (expandido) {
-        
+        id("imgMapa").className = "imgMapa";
+        id("imgMapa").value = false;
     } else {
-
+        id("imgMapa").className = "imgMapote";
+        id("imgMapa").value = true;
     }
 }
