@@ -92,14 +92,14 @@ color: #007a13;
 #clave{
 	width: 300px;
 }
-#imgMapa{
+.imgMapa{
 	max-width: 100%;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 	padding: 0.2em;
 }
-#imgMapote{
+.imgMapote{
 	width: 100%;
 	display: block;
 }
