@@ -64,7 +64,7 @@ img{
 button{
 	font-size: 1.2em;
 	padding: 12px;
-	background: #5A6680;
+	background: #5A6680 !important;
 	color: white;
 	border: none;
 	border-radius: 10px 0 10px 0;
