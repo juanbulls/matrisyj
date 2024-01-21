@@ -70,7 +70,7 @@ var countDownDate = new Date("Mar 16, 2024 15:30:00").getTime();
     var distance = countDownDate - now;
     if (distance < 0) {
       clearInterval(x);
-      document.getElementById("timer").innerHTML = "EXPIRED";
+      document.getElementById("timer").innerHTML = "Va tarde, apúrele...";
     } else {
       var d = Math.floor(distance / (1000 * 60 * 60 * 24));
       var h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));

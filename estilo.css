@@ -23,10 +23,7 @@ h1{text-align:center;margin: 2px;}
 }
 .contador{background-color: #5A6680;padding: 20px;color: white;border-radius: 20px 0 20px 0;}
 
-.tcont{
-padding-left: 10em;
-font-size: 0.4em;
-}
+.tcont{padding-left: 10em;font-size: 0.6em;}
 
 .botonesDate{
 	text-align: center
@@ -80,17 +77,17 @@ button{
 	color: rgb(255, 255, 255);
 	font-size: 40px;
 	font-weight: 400;
-	background-color: rgb(0, 114, 198);
+	background-color: #5A6680;
 	margin: 0.1em;
 }
 .botonEmail:hover{
 	box-shadow: 2px 3px 4px #888888;
 }
 #google{
-	background-color: rgb(255,167,0);
+	background-color: #5A6680;
 }
 #outlook{
-	background-color: rgb(0, 114, 198);
+	background-color: #5A6680;
 }
 #respuestaAsistentes{
 color: #007a13;
