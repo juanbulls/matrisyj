@@ -23,7 +23,7 @@ h1{text-align:center;margin: 2px;}
 }
 .contador{background-color: #5A6680;padding: 20px;color: white;border-radius: 20px 0 20px 0;}
 
-.tcont{padding-left: 10em;font-size: 0.6em;}
+.tcont{padding-left: 5em;font-size: 0.6em;}
 
 .botonesDate{
 	text-align: center
@@ -47,7 +47,7 @@ input{
 	padding: 0.3em;
 	border: none;
 	background: none;
-	border-bottom: solid #0072c6;
+	border-bottom: solid #5A6680;
 	width: 600px;
 }
 textarea:focus, input:focus{
@@ -63,7 +63,11 @@ img{
 }
 button{
 	font-size: 1.2em;
-	padding: 10px;
+	padding: 12px;
+	background: #5A6680;
+	color: white;
+	border: none;
+	border-radius: 10px 0 10px 0;
 }
 
 .botonEmail{
@@ -79,6 +83,7 @@ button{
 	font-weight: 400;
 	background-color: #5A6680;
 	margin: 0.1em;
+	border-radius: 10px 0 10px 0;
 }
 .botonEmail:hover{
 	box-shadow: 2px 3px 4px #888888;
