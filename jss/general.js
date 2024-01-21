@@ -2,7 +2,17 @@ function abrirPagina(url){
     window.open(url,'_blank');
 }
 
-const secDummy = "La selva, brujas";
+const secDummy = "<a href=\"https://maps.app.goo.gl/cAXDch5cvm3yCERr8\" target=\"_blank\""
++ "<button class='botonEmail'>"
++ "Google Maps: Hacienda Brujas </button> </a>"
++ "<br>"
++ "</ul> <img id=\"imgMapa\" src='mpim/mapa.jpg'>"
++ " <p> <b>Indicaciones</b> </p>"
++ "<br>"
++ "<br>"
++ "<b>Por la Calera</b> <ul>"
++ "<li>Luego del peaje de patios </li>"
++ "<li>Pasando la pradera de potosi </li>";
 
 function mapaEjecutor(event, clave){
     if (event.keyCode === 13) {
@@ -53,3 +63,19 @@ async function enviarAsistentes(asistentes){
         }
     }
 }
+
+var countDownDate = new Date("Mar 16, 2024 15:30:00").getTime();
+  var x = setInterval(function() {
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("timer").innerHTML = "EXPIRED";
+    } else {
+      var d = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var s = Math.floor((distance % (1000 * 60)) / 1000);
+      document.getElementById("timer").innerHTML = d + " dias " + h + " horas " + m + " minutos " + s + " segundos ";
+    }
+  }, 1000);

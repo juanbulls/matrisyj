@@ -16,12 +16,18 @@ body{
 }
 h1{text-align:center;margin: 2px;}
 #tituloSalvaFecha{
-	color:rgb(255, 255, 255);
+	color: rgb(255 255 255);
 	margin: 2px;
 	font-size: 1.6em;
 	text-align:center;
-	text-shadow: #2842e7 1px 0 10px;
 }
+.contador{background-color: #5A6680;padding: 20px;color: white;border-radius: 20px 0 20px 0;}
+
+.tcont{
+padding-left: 10em;
+font-size: 0.4em;
+}
+
 .botonesDate{
 	text-align: center
 }
@@ -103,6 +109,9 @@ color: #007a13;
 	width: 100%;
 	display: block;
 }
+ropa{
+	max-width: 300px;
+}
 
 /* ************Propiedades solo para desktop************ */
 @media screen and (min-aspect-ratio:12/10){
@@ -138,11 +147,22 @@ input{
 	padding: 10px 20px;
 }
 #tituloSalvaFecha{
-	font-size: 1.2em;
+	font-size: 1.8em;
 }
+.contador{
+	padding: 20px;
+	}
+	
+	.tcont{
+	padding-left: 3em;
+	font-size: 1em;
+	}
 .opcionCalendario{
 	margin: 0;
 	font-size: 1.3em;
+}
+.ropa{
+	max-width: 300px;
 }
 
 }
