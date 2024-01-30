@@ -48,7 +48,7 @@ input{
 	border: none;
 	background: none;
 	border-bottom: solid #5A6680;
-	max-width: 800px;
+	min-width: 400px;
 }
 textarea:focus, input:focus{
     outline: none;
