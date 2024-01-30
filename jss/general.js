@@ -2,17 +2,16 @@ function abrirPagina(url){
     window.open(url,'_blank');
 }
 
-const secDummy = "<a href=\"https://maps.app.goo.gl/cAXDch5cvm3yCERr8\" target=\"_blank\""
+const secDummy = "<a href=\"https://maps.app.goo.gl/\" target=\"_blank\""
 + "<button class='botonEmail'>"
-+ "Google Maps: Hacienda Brujas </button> </a>"
 + "<br>"
-+ "</ul> <img id=\"imgMapa\" src='mpim/mapa.jpg'>"
++ "</ul> <img id=\"imgMapa\" src=''>"
 + " <p> <b>Indicaciones</b> </p>"
 + "<br>"
 + "<br>"
 + "<b>Por la Calera</b> <ul>"
 + "<li>Luego del peaje de patios </li>"
-+ "<li>Pasando la pradera de potosi </li>";
++ "<li>Por ahi </li>";
 
 function mapaEjecutor(event, clave){
     if (event.keyCode === 13) {
