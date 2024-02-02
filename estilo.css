@@ -3,16 +3,28 @@
 body{
 	font-family: "Futura";
 	font-size: 2em;
-	background: url(fondoFoto.JPG) no-repeat center center fixed;
 	background-size: cover;
 }
 .contPrincipal{
 	margin: 0 auto;
 	padding: 30px;
 	width: fit-content;
-	max-width: 80%;
-	background-color: rgba(111, 186, 209, 0.2);
-	backdrop-filter: blur(4px);
+	width: 70%;
+	background-color: rgb(218 246 255 / 20%);
+	backdrop-filter: blur(1px);
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.contFondo{
+	width: 80%;
+	/* background-color: #f7fdf8; */
+	position: fixed;
+	left: 50%;
+	transform: translateX(-50%);
+}
+#lienzo{
+	float: right;
 }
 h1{text-align:center;margin: 2px;}
 #tituloSalvaFecha{
@@ -121,7 +133,11 @@ body{
 	font-size: 1em;
 }
 .contPrincipal{
-	max-width: 50%;
+	width: 50%;
+}
+
+.contFondo{
+	width: 65%;
 }
 p{
 	font-size: 1em;
