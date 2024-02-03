@@ -11,7 +11,7 @@ body{
 	width: fit-content;
 	width: 70%;
 	background-color: rgb(218 246 255 / 20%);
-	backdrop-filter: blur(1px);
+	XXXbackdrop-filter: blur(2px);
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
