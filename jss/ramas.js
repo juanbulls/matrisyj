@@ -9,11 +9,28 @@ l.width = ancho;
 l.height = alto;
 
 var ctx = l.getContext("2d");
-ctx.strokeStyle = 'rgba(58 88 110)';
+ctx.strokeStyle = 'rgba(58 88 110)'; //descomentar
 
-var trazo = 100;
+function lineaCapullo(x, y, bx, by, xf, yf){
+    ctx.moveTo(x, y);
+    ctx.quadraticCurveTo(bx, by, xf, yf);
+}
+function flor(x, y){
+    var altura = 20;
+    //ctx.strokeStyle = 'rgba(250 10 10)'; //quitar
+    var desvX = (Math.random() * 20) - 10;
+    ctx.beginPath();
+    lineaCapullo(x, y, x-altura/2, y-altura/2, x+desvX, y-altura);
+    lineaCapullo(x, y, x+altura/2, y-altura/2, x+desvX, y-altura);
+    var desv2X = (Math.random() * 10) - 5;
+    lineaCapullo(x, y, x-altura/2, y-altura/2, x+desv2X, y-altura);
+    lineaCapullo(x, y, x+altura/2, y-altura/2, x+desv2X, y-altura);
+    ctx.stroke();
+}
+
 function rama(xi, yi, nodos){
     nodos.forEach(n => {
+        //ctx.strokeStyle = 'rgba(58 88 110)'; //quitar
         var pos = {x:xi-n[0], y:yi-n[1]};
         ctx.beginPath();
         ctx.moveTo(xi, yi);
@@ -21,6 +38,8 @@ function rama(xi, yi, nodos){
         ctx.stroke();
         if (n.length != 2) { // es rama
             rama(pos.x, pos.y, n[2]);
+        } else { // es flor
+            flor(pos.x, pos.y);
         }
     });
 }
