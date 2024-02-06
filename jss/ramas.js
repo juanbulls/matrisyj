@@ -1,49 +1,56 @@
 r = id("ramas");
-l = id("lienzo");
+l1 = id("lienzo");
+l2 = id("lienzo2");
 
 alto = window.innerHeight;
 ancho = 400;
 r.style.height = alto+'px';
 
-l.width = ancho;
-l.height = alto;
+l1.width = ancho;
+l1.height = alto;
+l2.width = ancho;
+l2.height = alto;
 
-var ctx = l.getContext("2d");
+var ctx = l1.getContext("2d");
+var ct2 = l2.getContext("2d");
 ctx.strokeStyle = 'rgba(58 88 110)'; //descomentar
+ct2.strokeStyle = 'rgba(58 88 110)'; //descomentar
 
-function lineaCapullo(x, y, bx, by, xf, yf){
-    ctx.moveTo(x, y);
-    ctx.quadraticCurveTo(bx, by, xf, yf);
+function lineaCapullo(l, x, y, bx, by, xf, yf){
+    l.moveTo(x, y);
+    l.quadraticCurveTo(bx, by, xf, yf);
 }
-function flor(x, y){
+function flor(l, x, y){
     var altura = 20;
-    //ctx.strokeStyle = 'rgba(250 10 10)'; //quitar
+    //l.strokeStyle = 'rgba(250 10 10)'; //quitar
     var desvX = (Math.random() * 20) - 10;
-    ctx.beginPath();
-    lineaCapullo(x, y, x-altura/2, y-altura/2, x+desvX, y-altura);
-    lineaCapullo(x, y, x+altura/2, y-altura/2, x+desvX, y-altura);
+    l.beginPath();
+    lineaCapullo(l, x, y, x-altura/2, y-altura/2, x+desvX, y-altura);
+    lineaCapullo(l, x, y, x+altura/2, y-altura/2, x+desvX, y-altura);
     var desv2X = (Math.random() * 10) - 5;
-    lineaCapullo(x, y, x-altura/2, y-altura/2, x+desv2X, y-altura);
-    lineaCapullo(x, y, x+altura/2, y-altura/2, x+desv2X, y-altura);
-    ctx.stroke();
+    lineaCapullo(l, x, y, x-altura/2, y-altura/2, x+desv2X, y-altura);
+    lineaCapullo(l, x, y, x+altura/2, y-altura/2, x+desv2X, y-altura);
+    l.stroke();
 }
 
-function rama(xi, yi, nodos){
+function rama(l, xi, yi, nodos){
     nodos.forEach(n => {
-        //ctx.strokeStyle = 'rgba(58 88 110)'; //quitar
+        //l.strokeStyle = 'rgba(58 88 110)'; //quitar
         var pos = {x:xi-n[0], y:yi-n[1]};
-        ctx.beginPath();
-        ctx.moveTo(xi, yi);
-        ctx.lineTo(pos.x, pos.y);
-        ctx.stroke();
+        l.beginPath();
+        l.moveTo(xi, yi);
+        l.lineTo(pos.x, pos.y);
+        l.stroke();
         if (n.length != 2) { // es rama
-            rama(pos.x, pos.y, n[2]);
+            rama(l, pos.x, pos.y, n[2]);
         } else { // es flor
-            flor(pos.x, pos.y);
+            flor(l, pos.x, pos.y);
         }
     });
 }
-rama(ancho, alto-10, [
+
+// ramas que nacen de abajo (orden de abajo hacia arriba)
+rama(ctx, ancho, alto-10, [
     [30, 65, [
         [45, 20, [
             [20, -5], [15,8]
@@ -57,7 +64,7 @@ rama(ancho, alto-10, [
         ]
     ]]
 ]);
-rama(ancho, alto-20, [
+rama(ctx, ancho, alto-20, [
     [100, 200, [
         [70, 40, [[20, -10], [23, 30],
             [60, 28, [[10, -5], [11, 15],
@@ -83,10 +90,34 @@ rama(ancho, alto-20, [
             ]]
         ]]
 ]);
-rama(ancho, alto-30, [
+rama(ctx, ancho, alto-30, [
     [90, 230, [[-10, 20],
         [110, 120, [
             [30, 45], [-5, 20]
+        ]]
+    ]]
+]);
+
+// Ramas que nacen del medio hacia arriba
+rama(ct2, ancho, alto-350, [
+    [70, 200, [[50, 20, [
+        [30, 2], [25, 25],
+    ]], [5, 80, [
+        [30, 30], [-10, 40],
+    ]],
+        [60, 100, [[45, -10], [20, 30],
+            [50, 30, [[22, -5], [10, 15],
+                [65, 10, [
+                    [30, -10], [5, 8]
+                ]]
+            ]]
+        ]]
+    ]]
+]);
+rama(ct2, ancho, alto-320, [
+    [35, 150, [[40, 25], [5, 65],
+        [40, 55, [
+            [40, 5], [25, 50]
         ]]
     ]]
 ]);

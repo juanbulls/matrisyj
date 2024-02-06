@@ -11,19 +11,19 @@ body{
 	width: fit-content;
 	width: 70%;
 	background-color: rgb(218 246 255 / 20%);
-	XXXbackdrop-filter: blur(2px);
+	backdrop-filter: blur(1px);
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
 }
 .contFondo{
 	width: 80%;
-	/* background-color: #f7fdf8; */
+	/* background-color: #83ff9819; */
 	position: fixed;
 	left: 50%;
 	transform: translateX(-50%);
 }
-#lienzo{
+#lienzo, #lienzo2{
 	float: right;
 }
 h1{text-align:center;margin: 2px;}
@@ -137,7 +137,7 @@ body{
 }
 
 .contFondo{
-	width: 65%;
+	width: 70%;
 }
 p{
 	font-size: 1em;
