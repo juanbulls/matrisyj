@@ -15,6 +15,10 @@ var ctx = l1.getContext("2d");
 var ct2 = l2.getContext("2d");
 ctx.strokeStyle = 'rgba(58 88 110)'; //descomentar
 ct2.strokeStyle = 'rgba(58 88 110)'; //descomentar
+ct2.shadowColor = 'rgba(250 250 250)';
+ct2.shadowBlur = 5;
+ct2.shadowOffsetX = 2;
+ct2.shadowOffsetY = 2;
 
 function lineaCapullo(l, x, y, bx, by, xf, yf){
     l.moveTo(x, y);
