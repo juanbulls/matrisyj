@@ -139,6 +139,9 @@ body{
 .contFondo{
 	width: 70%;
 }
+#ramas2{
+	pointer-events: none;
+}
 p{
 	font-size: 1em;
 	margin: 2px;
