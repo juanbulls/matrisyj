@@ -26,9 +26,11 @@ function lineaCapullo(l, x, y, bx, by, xf, yf){
     l.moveTo(x, y);
     l.quadraticCurveTo(bx, by, xf, yf);
 }
-var desvX = (Math.random() * 20) - 10;
-var desv2X = (Math.random() * 10) - 5;
+
+var mov = 0;
 function flor(l, x, y){
+    var desvX = (Math.random() * 20) - 10 + mov;
+    var desv2X = (Math.random() * 10) - 5 + mov;
     var altura = 20;
     l.beginPath();
     lineaCapullo(l, x, y, x-altura/2, y-altura/2, x+desvX, y-altura);
@@ -138,11 +140,10 @@ function animar(){
     var diff = (new Date().getTime()-ahora)/(1000);
     console.log(Math.sin(diff));
     var atenuar = 40;
-    desvX += Math.sin(diff)/atenuar;
-    desv2X -= Math.sin(diff)/atenuar;
+    mov += Math.sin(diff)/atenuar;
     ctx.clearRect(0,0, ancho, alto);
     ct2.clearRect(0,0, ancho, alto);
     ramas.forEach(r => { rama(r[0], r[1], r[2], r[3]) });
 }
 var ahora = new Date().getTime();
-setInterval(animar, 1000/60);
+setInterval(animar, 1000/5);
