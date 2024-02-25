@@ -137,8 +137,9 @@ function animar(){
     on jcwills.com ⛵ */
     var diff = (new Date().getTime()-ahora)/(1000);
     console.log(Math.sin(diff));
-    desvX += Math.sin(diff)/50;
-    desv2X -= Math.sin(diff)/50;
+    var atenuar = 40;
+    desvX += Math.sin(diff)/atenuar;
+    desv2X -= Math.sin(diff)/atenuar;
     ctx.clearRect(0,0, ancho, alto);
     ct2.clearRect(0,0, ancho, alto);
     ramas.forEach(r => { rama(r[0], r[1], r[2], r[3]) });
