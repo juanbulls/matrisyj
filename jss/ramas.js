@@ -138,7 +138,6 @@ function animar(){
     /* Juan Wills animation, see other canvas efects
     on jcwills.com ⛵ */
     var diff = (new Date().getTime()-ahora)/(1000);
-    console.log(Math.sin(diff));
     var atenuar = 40;
     mov += Math.sin(diff)/atenuar;
     ctx.clearRect(0,0, ancho, alto);
