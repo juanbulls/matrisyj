@@ -141,6 +141,7 @@ body{
 }
 #ramas2{
 	pointer-events: none;
+	touch-action: none;
 }
 p{
 	font-size: 1em;
