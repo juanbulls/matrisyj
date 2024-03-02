@@ -24,6 +24,33 @@
         <p id="tituloSalvaFecha">16 de marzo de 2024, 3:00 PM</p>
         <p class="tcont">Flatan: </p><p class="tcont" id="timer"></p>
     </div>
+    
+    <h2>Pide canciones:</h2>
+    <p>Pide canciones antes del matrimonio:</p>
+    <hr/>
+    <input onkeypress="cancionesEjecutor(event, this.value)"
+         id="cancion" placeholder="ej: El caballito – Carlos Vives">
+    <button onclick="enviarCancion(document.getElementById('cancion').value)">Enviar</button>
+    <p id="respuestaCancion" class="respuesta"></p>
+    
+    <h2>Confirmar Asistencia:</h2>
+    <hr/>
+    <input onkeypress="asistentesEjecutor(event, this.value)"
+         id="asistentes" placeholder="Nombre de quienes asisten">
+    <button onclick="enviarAsistentes(document.getElementById('asistentes').value)">Enviar</button>
+    <p id="respuestaAsistentes" class="respuesta"></p>
+
+    <h2>Lugar de la misa y recepción</h2>
+    <hr/>
+    <div id="secLugar">
+        <label >Ingresa clave:</label>
+        <p>Pista clave 1: Cómo le dicen a silvana en la casa?</p>
+        <p>Pista clave 2: Qué carro tiene Juan? Toyota que...</p>
+        <br>
+        <input onkeypress="mapaEjecutor(event, this.value)" type="text" id="clave" size="8">
+        <button onclick="mostrarMapa(document.getElementById('clave').value)">Mostrar</button>
+    </div>
+    
     <div class="botonesDate">
         <h2> Save the date: </h2>
         <hr/>
@@ -42,23 +69,7 @@
             Outlook
         </button> 
     </div>
-    
-    <h2>Confirmar Asistencia:</h2>
-    <hr/>
-    <input onkeypress="asistentesEjecutor(event, this.value)"
-         id="asistentes" placeholder="Nombre de quienes asisten">
-    <button onclick="enviarAsistentes(document.getElementById('asistentes').value)">Enviar</button>
-    <p id="respuestaAsistentes"></p>
-    <h2>Lugar de la misa y recepción</h2>
-    <hr/>
-    <div id="secLugar">
-        <label >Ingresa clave:</label>
-        <p>Pista clave 1: Cómo le dicen a silvana en la casa?</p>
-        <p>Pista clave 2: Qué carro tiene Juan? Toyota que...</p>
-        <br>
-        <input onkeypress="mapaEjecutor(event, this.value)" type="text" id="clave" size="8">
-        <button onclick="mostrarMapa(document.getElementById('clave').value)">Mostrar</button>
-    </div>
+
     <h2>Código De Vestimenta (semiformal)</h2>
     <hr/>
     <img class="ropa" src="vestA.PNG"/>
