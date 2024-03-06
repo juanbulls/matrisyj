@@ -62,15 +62,19 @@
         <h2>Album:</h2>
         <div id="album">
             <?php
-            $allowedExtensions = array('jpg', 'jpeg', 'png', 'gif');
-            $imageFiles = array_filter(glob('uploads/*'), function ($file) use ($allowedExtensions) {
-                return in_array(strtolower(pathinfo($file, PATHINFO_EXTENSION)), $allowedExtensions);
-            });
-    
-            foreach ($imageFiles as $imageFile) {
-                echo '<img src="' . $imageFile . '" alt="Album Image">';
-            }
-            ?>
+        $allowedExtensions = array('jpg', 'jpeg', 'png', 'gif');
+        $imageFiles = array_filter(glob('uploads/*'), function ($file) use ($allowedExtensions) {
+            return in_array(strtolower(pathinfo($file, PATHINFO_EXTENSION)), $allowedExtensions);
+        });
+
+        usort($imageFiles, function ($a, $b) {
+            return filemtime($b) - filemtime($a);
+        });
+
+        foreach ($imageFiles as $imageFile) {
+            echo '<img src="' . $imageFile . '" alt="Album Image">';
+        }
+        ?>
         </div>
     </div>
 </div>
