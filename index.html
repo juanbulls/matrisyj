@@ -59,6 +59,19 @@
             <input type="file" name="file" accept="image/*" required>
             <button type="submit">Subir</button>
         </form>
+        <h2>Album:</h2>
+        <div id="album">
+            <?php
+            $allowedExtensions = array('jpg', 'jpeg', 'png', 'gif');
+            $imageFiles = array_filter(glob('uploads/*'), function ($file) use ($allowedExtensions) {
+                return in_array(strtolower(pathinfo($file, PATHINFO_EXTENSION)), $allowedExtensions);
+            });
+    
+            foreach ($imageFiles as $imageFile) {
+                echo '<img src="' . $imageFile . '" alt="Album Image">';
+            }
+            ?>
+        </div>
     </div>
 </div>
 <script src="jss/general.js"></script>
