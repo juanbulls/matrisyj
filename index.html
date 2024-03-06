@@ -22,23 +22,8 @@
     <h1>Matrimonio Silvana y Juan</h1>
     <div class="contador">
         <p id="tituloSalvaFecha">16 de marzo de 2024, 3:00 PM</p>
-        <p class="tcont">Flatan: </p><p class="tcont" id="timer"></p>
+        <p class="tcont">Tiempo restante: </p><p class="tcont" id="timer"></p>
     </div>
-    
-    <h2>Pide canciones:</h2>
-    <p>Pide canciones antes del matrimonio:</p>
-    <hr/>
-    <input onkeypress="cancionesEjecutor(event, this.value)"
-         id="cancion" placeholder="ej: El caballito – Carlos Vives">
-    <button onclick="enviarCancion(document.getElementById('cancion').value)">Enviar</button>
-    <p id="respuestaCancion" class="respuesta"></p>
-    
-    <h2>Confirmar Asistencia:</h2>
-    <hr/>
-    <input onkeypress="asistentesEjecutor(event, this.value)"
-         id="asistentes" placeholder="Nombre de quienes asisten">
-    <button onclick="enviarAsistentes(document.getElementById('asistentes').value)">Enviar</button>
-    <p id="respuestaAsistentes" class="respuesta"></p>
 
     <h2>Lugar de la misa y recepción</h2>
     <hr/>
@@ -50,36 +35,31 @@
         <input onkeypress="mapaEjecutor(event, this.value)" type="text" id="clave" size="8">
         <button onclick="mostrarMapa(document.getElementById('clave').value)">Mostrar</button>
     </div>
-    
-    <div class="botonesDate">
-        <h2> Save the date: </h2>
+
+    <div id="vestimenta">
+        <h2>Código De Vestimenta (semiformal)</h2>
         <hr/>
-        <button
-            id="google"
-            class="botonEmail"
-            onclick="abrirPagina('https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20240316T183000Z%2F20240317T044500Z&details=Encuentra%20los%20%C3%BAltimos%20detalles%20en%20silvanayjuan.com&location=&text=Matrimonio%20Silvana%20')"
-            >
-            Google
-        </button> 
-        <button 
-            id="outlook"
-            class="botonEmail"
-            onclick="abrirPagina('https://outlook.live.com/calendar/0/deeplink/compose?allday=false&body=Encuentra%20los%20%C3%BAltimos%20detalles%20en%20silvanayjuan.com&enddt=2024-03-16T23%3A45%3A00&location=&path=%2Fcalendar%2Faction%2Fcompose&rru=addevent&startdt=2024-03-16T13%3A30%3A00&subject=Matrimonio%20Silvana%20')"
-            >
-            Outlook
-        </button> 
+        <img class="ropa" src="vestA.PNG"/>
+        <img class="ropa" src="vestB.PNG"/>
+        <img class="ropa" src="vestC.PNG"/>
+        <img class="ropa" src="vestD.PNG"/>
     </div>
 
-    <h2>Código De Vestimenta (semiformal)</h2>
-    <hr/>
-    <img class="ropa" src="vestA.PNG"/>
-    <img class="ropa" src="vestB.PNG"/>
-    <img class="ropa" src="vestC.PNG"/>
-    <img class="ropa" src="vestD.PNG"/>
-    
-    <h2>Regalos:</h2>
-    <hr/>
-    <p>Buena actitud de fiesta</p>
+    <div id="regalos">
+        <h2>Regalos:</h2>
+        <hr/>
+        <p>Buena actitud de fiesta</p>
+    </div>
+
+    <div id="fotos">
+        <h2>Fotos</h2>
+        <hr/>
+        <p>Selecciona la foto, luego da click en subir.</p>
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" accept="image/*" required>
+            <button type="submit">Subir</button>
+        </form>
+    </div>
 </div>
 <script src="jss/general.js"></script>
 <script src="jss/ramas.js"></script>

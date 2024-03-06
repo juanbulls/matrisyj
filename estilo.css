@@ -126,6 +126,9 @@ color: #007a13;
 ropa{
 	max-width: 300px;
 }
+#fotos{
+	display: none;
+}
 
 /* ************Propiedades solo para desktop************ */
 @media screen and (min-aspect-ratio:12/10){

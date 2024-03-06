@@ -63,38 +63,17 @@ async function enviarAsistentes(asistentes){
     }
 }
 
-function cancionesEjecutor(event, cancion){
-    if (event.keyCode === 13) {
-        event.preventDefault();
-        enviarCancion(cancion);
-    }
-}
-async function enviarCancion(cancion){
-    if (local) {
-        id('respuestaCancion').innerHTML = "Solicitud de cancion enviada";
-        id('cancion').value = '';
-    } else {
-        try {
-            const response = await ajax('canciones.php', 'nombre=' + cancion);
-            if (response.trim() === "error") {
-                alert("Error enviando cancion");
-            } else { 
-                id('respuestaCancion').innerHTML = "Solicitud de cancion enviada";
-                id('cancion').value = '';
-            }
-        } catch (error) {
-            console.error("Error:", error);
-        }
-    }
-}
-
 var countDownDate = new Date("Mar 16, 2024 15:30:00").getTime();
   var x = setInterval(function() {
     var now = new Date().getTime();
     var distance = countDownDate - now;
-    if (distance < 0) {
+    if (true) {
       clearInterval(x);
-      document.getElementById("timer").innerHTML = "Va tarde, apúrele...";
+      id('timer').innerHTML = "Va tarde, apúrele...";
+      id('vestimenta').style.display = "none";
+      id('regalos').style.display = "none";
+      id('fotos').style.display = "block";
+
     } else {
       var d = Math.floor(distance / (1000 * 60 * 60 * 24));
       var h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
