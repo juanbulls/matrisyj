@@ -1,7 +1,12 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $uploadDir = 'uploads/';
-    $uploadFile = $uploadDir . basename($_FILES['file']['name']);
+    
+    // Generate a unique filename for the uploaded image
+    $originalFileName = $_FILES['file']['name'];
+    $extension = strtolower(pathinfo($originalFileName, PATHINFO_EXTENSION));
+    $newFileName = uniqid('image_') . '.' . $extension;
+    $uploadFile = $uploadDir . $newFileName;
 
     // Check if the file is an image
     $imageFileType = strtolower(pathinfo($uploadFile, PATHINFO_EXTENSION));
@@ -9,6 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (in_array($imageFileType, $allowedExtensions)) {
         if (move_uploaded_file($_FILES['file']['tmp_name'], $uploadFile)) {
+            // Redirect back to the original website
             header('Location: index.html');
             exit;
         } else {
@@ -19,3 +25,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
+
