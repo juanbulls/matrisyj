@@ -62,20 +62,3 @@ async function enviarAsistentes(asistentes){
         }
     }
 }
-
-var countDownDate = new Date("Mar 16, 2024 15:30:00").getTime();
-  var x = setInterval(function() {
-    var now = new Date().getTime();
-    var distance = countDownDate - now;
-    if (distance < 0) {
-      clearInterval(x);
-      id('fotos').style.display = "block";
-
-    } else {
-      var d = Math.floor(distance / (1000 * 60 * 60 * 24));
-      var h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      var m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var s = Math.floor((distance % (1000 * 60)) / 1000);
-      document.getElementById("timer").innerHTML = d + " dias " + h + " horas " + m + " minutos " + s + " segundos ";
-    }
-  }, 1000);

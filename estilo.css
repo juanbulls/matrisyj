@@ -127,7 +127,7 @@ ropa{
 	max-width: 300px;
 }
 #fotos{
-	display: none;
+	display: block;
 }
 
 /* ************Propiedades solo para desktop************ */
