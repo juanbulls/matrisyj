@@ -69,9 +69,6 @@ var countDownDate = new Date("Mar 16, 2024 15:30:00").getTime();
     var distance = countDownDate - now;
     if (distance < 0) {
       clearInterval(x);
-      id('timer').innerHTML = "Va tarde, apúrele...";
-      id('vestimenta').style.display = "none";
-      id('regalos').style.display = "none";
       id('fotos').style.display = "block";
 
     } else {

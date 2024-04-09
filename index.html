@@ -22,43 +22,11 @@
     <h1>Matrimonio Silvana y Juan</h1>
     <div class="contador">
         <p id="tituloSalvaFecha">16 de marzo de 2024, 3:00 PM</p>
-        <p class="tcont">Tiempo restante: </p><p class="tcont" id="timer"></p>
-    </div>
-
-    <h2>Lugar de la misa y recepción</h2>
-    <hr/>
-    <div id="secLugar">
-        <label >Ingresa clave:</label>
-        <p>Pista clave 1: Cómo le dicen a silvana en la casa?</p>
-        <p>Pista clave 2: Qué carro tiene Juan? Toyota que...</p>
-        <br>
-        <input onkeypress="mapaEjecutor(event, this.value)" type="text" id="clave" size="8">
-        <button onclick="mostrarMapa(document.getElementById('clave').value)">Mostrar</button>
-    </div>
-
-    <div id="vestimenta">
-        <h2>Código De Vestimenta (semiformal)</h2>
-        <hr/>
-        <img class="ropa" src="vestA.PNG"/>
-        <img class="ropa" src="vestB.PNG"/>
-        <img class="ropa" src="vestC.PNG"/>
-        <img class="ropa" src="vestD.PNG"/>
-    </div>
-
-    <div id="regalos">
-        <h2>Regalos:</h2>
-        <hr/>
-        <p>Buena actitud de fiesta</p>
     </div>
 
     <div id="fotos">
-        <h2>Fotos En Vivo</h2>
+        <h2>Fotos</h2>
         <hr/>
-        <p>Selecciona la foto, luego da click en subir.</p>
-        <form action="upload.php" method="post" enctype="multipart/form-data">
-            <input type="file" name="file" accept="image/*" required>
-            <button type="submit">Subir</button>
-        </form>
         <h2>Album:</h2>
         <div id="album">
             <?php
